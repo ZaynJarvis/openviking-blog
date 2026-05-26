@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="kami">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>OpenViking Blog</title>
+  <meta name="description" content="Technical notes from the OpenViking team." />
+  <meta name="application-name" content="OpenViking Blog" />
+  <meta name="theme-color" content="#f5f4ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1a1917" media="(prefers-color-scheme: dark)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="OV Blog" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+  <script>
+    if (location.hash.startsWith('#/')) {
+      const [legacyPath, legacyQuery = ''] = location.hash.slice(1).split('?');
+      const cleanPath = legacyPath.replace(/\/$/, '') + '/';
+      location.replace(cleanPath + (legacyQuery ? '?' + legacyQuery : ''));
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

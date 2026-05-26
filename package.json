@@ -1,0 +1,22 @@
+{
+  "name": "openviking-blog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --ssr src/ssg.jsx --outDir dist-ssr && node scripts/render-static.mjs",
+    "preview": "vite preview",
+    "vercel-build": "npm run build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.1",
+    "vite": "^6.3.5",
+    "vite-plugin-image-optimizer": "^2.0.3"
+  }
+}
